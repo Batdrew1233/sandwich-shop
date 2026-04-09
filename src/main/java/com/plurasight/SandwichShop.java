@@ -29,13 +29,22 @@ public class SandwichShop {
         //If statement
         if (yourAge <= 17){
             double totalPurchase = sandwhichNumber - tenPercent;
+            String formattedTotalPurchase = String.format("%.2f", totalPurchase);
             System.out.println("10% discount applied.");
+            System.out.println("Your total is $" + formattedTotalPurchase);
         }else if (yourAge >= 65){
             double totalPurchase = sandwhichNumber - twentyPercent;
+            String formattedTotalPurchase = String.format("%.2f", totalPurchase);
             System.out.println("20% discount applied.");
+            System.out.println("Your total is $" + formattedTotalPurchase);
         }else {
+            double totalPurchase = sandwhichNumber;
             System.out.println("No discount applied.");
+            System.out.println("Your total is $" + totalPurchase);
         }
+
+        myScanner.close();
+
 
 
     }
